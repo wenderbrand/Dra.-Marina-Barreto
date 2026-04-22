@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dra. Marina Barreto & Dr. Brécio Andrade — Odontologia de Excelência</title>
+<meta name="description" content="Clínica odontológica em Ponte Nova, MG. Especialistas em clareamento dental, aparelhos invisíveis, ortodontia, cirurgia e estética. Avaliação 5.0 ⭐ no Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ===== TOKENS ===== */
+:root {
+  --navy: #0d1f2d;
+  --navy-mid: #162638;
+  --teal: #1a6b7a;
+  --teal-light: #20828f;
+  --gold: #c9a84c;
+  --gold-light: #e0c070;
+  --cream: #faf7f2;
+  --white: #ffffff;
+  --gray-100: #f5f2ed;
+  --gray-300: #d4cfc7;
+  --gray-500: #8a8278;
+  --gray-700: #4a4540;
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-sm: 0 2px 12px rgba(13,31,45,0.08);
+  --shadow-md: 0 8px 40px rgba(13,31,45,0.12);
+  --shadow-lg: 0 24px 80px rgba(13,31,45,0.18);
+  --radius: 4px;
+  --radius-lg: 12px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--cream);
+  color: var(--navy);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb { background: var(--teal); border-radius: 2px; }
+
+/* ===== NAV ===== */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 5vw;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(250,247,242,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+nav.scrolled {
+  border-bottom-color: var(--gray-300);
+  box-shadow: var(--shadow-sm);
+}
+.nav-logo {
+  display: flex; flex-direction: column; gap: 1px;
+}
+.nav-logo-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--navy);
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+.nav-logo-sub {
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  color: var(--teal);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.nav-links {
+  display: flex; gap: 2.5rem; list-style: none;
+}
+.nav-links a {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-700);
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.25s;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; left: 0;
+  width: 0; height: 1px;
+  background: var(--teal);
+  transition: width 0.3s var(--ease-smooth);
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta {
+  background: var(--teal);
+  color: var(--white) !important;
+  padding: 0.55rem 1.4rem;
+  border-radius: 2px;
+  font-weight: 500 !important;
+  letter-spacing: 0.08em !important;
+  transition: background 0.25s, transform 0.2s !important;
+}
+.nav-cta:hover { background: var(--teal-light) !important; transform: translateY(-1px); }
+.nav-cta::after { display: none !important; }
+
+.hamburger {
+  display: none;
+  flex-direction: column; gap: 5px;
+  cursor: pointer; padding: 4px;
+}
+.hamburger span {
+  display: block; width: 24px; height: 1.5px;
+  background: var(--navy);
+  transition: all 0.3s;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  overflow: hidden;
+  padding-top: 72px;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 40%, var(--teal) 100%);
+  z-index: 0;
+}
+.hero-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero-left {
+  position: relative; z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem 5vw 6rem 8vw;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center; gap: 0.5rem;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.35);
+  padding: 0.4rem 1rem;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  width: fit-content;
+}
+.hero-badge-star { color: var(--gold); font-size: 0.85rem; }
+.hero-badge-text {
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  font-weight: 500;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 4.5vw, 4rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.12;
+  margin-bottom: 1.5rem;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.hero-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.75;
+  max-width: 480px;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+.hero-actions {
+  display: flex; gap: 1rem; flex-wrap: wrap;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center; gap: 0.5rem;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 0.9rem 2rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.25s, transform 0.2s, box-shadow 0.25s;
+  box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(201,168,76,0.4);
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center; gap: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.35);
+  color: var(--white);
+  padding: 0.9rem 1.8rem;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+}
+.btn-ghost:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
+}
+.hero-stats {
+  display: flex; gap: 2.5rem;
+  margin-top: 4rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.hero-stat-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+}
+.hero-stat-num span { color: var(--gold); }
+.hero-stat-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  margin-top: 0.3rem;
+}
+
+.hero-right {
+  position: relative; z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 6vw 4rem 2vw;
+}
+.hero-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--radius-lg);
+  padding: 3rem 2.5rem;
+  backdrop-filter: blur(20px);
+  max-width: 400px;
+  width: 100%;
+  animation: floatCard 6s ease-in-out infinite;
+}
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.hero-card-icon {
+  width: 56px; height: 56px;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+}
+.hero-card-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+.hero-card-sub {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 2rem;
+}
+.hero-card-form {
+  display: flex; flex-direction: column; gap: 0.75rem;
+}
+.hero-card-form input,
+.hero-card-form select {
+  width: 100%;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 3px;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.hero-card-form input::placeholder { color: rgba(255,255,255,0.35); }
+.hero-card-form select option { background: var(--navy); }
+.hero-card-form input:focus,
+.hero-card-form select:focus { border-color: var(--gold); }
+.hero-card-form button {
+  width: 100%;
+  padding: 1rem;
+  background: var(--gold);
+  border: none;
+  border-radius: 3px;
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  margin-top: 0.25rem;
+}
+.hero-card-form button:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+.hero-card-note {
+  text-align: center;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  margin-top: 0.5rem;
+}
+
+/* Decorative wave */
+.hero-wave {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  z-index: 3;
+  line-height: 0;
+}
+.hero-wave svg { display: block; width: 100%; }
+
+/* ===== SECTION COMMONS ===== */
+section { position: relative; }
+.section-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
+.section-label {
+  display: inline-flex;
+  align-items: center; gap: 0.6rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.section-label::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--teal);
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--navy);
+  line-height: 1.18;
+  margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; color: var(--teal); }
+.section-desc {
+  font-size: 1rem;
+  color: var(--gray-500);
+  line-height: 1.75;
+  max-width: 520px;
+  font-weight: 300;
+}
+
+/* ===== ABOUT ===== */
+#sobre {
+  padding: 7rem 0;
+  background: var(--white);
+}
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.about-visual {
+  position: relative;
+}
+.about-img-wrap {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/5;
+  background: linear-gradient(145deg, var(--navy) 0%, var(--teal) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.about-img-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.about-icon-big {
+  font-size: 5rem;
+  opacity: 0.15;
+}
+/* decorative accent */
+.about-accent {
+  position: absolute;
+  top: -20px; right: -20px;
+  width: 120px; height: 120px;
+  border: 2px solid var(--gold);
+  border-radius: 4px;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.about-accent-2 {
+  position: absolute;
+  bottom: 20px; left: -20px;
+  width: 80px; height: 80px;
+  background: var(--gold);
+  opacity: 0.08;
+  border-radius: 50%;
+  pointer-events: none;
+}
+.about-badge-float {
+  position: absolute;
+  bottom: 2rem; right: -1.5rem;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.4rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center; gap: 0.8rem;
+  min-width: 180px;
+}
+.about-badge-float-icon {
+  width: 40px; height: 40px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-light));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white; font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.about-badge-float-num {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--navy);
+  line-height: 1;
+}
+.about-badge-float-label {
+  font-size: 0.72rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.about-content { padding-right: 1rem; }
+.about-text {
+  font-size: 1rem;
+  color: var(--gray-700);
+  line-height: 1.85;
+  font-weight: 300;
+  margin: 1.5rem 0 2rem;
+}
+.about-features {
+  display: flex; flex-direction: column; gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+.about-feature {
+  display: flex; align-items: flex-start; gap: 1rem;
+}
+.about-feature-check {
+  width: 28px; height: 28px;
+  background: rgba(26,107,122,0.08);
+  border: 1px solid rgba(26,107,122,0.2);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+  color: var(--teal); font-size: 0.75rem;
+}
+.about-feature-text strong {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.15rem;
+}
+.about-feature-text span {
+  font-size: 0.83rem;
+  color: var(--gray-500);
+  line-height: 1.5;
+}
+
+/* ===== SERVICES ===== */
+#servicos {
+  padding: 7rem 0;
+  background: var(--cream);
+}
+.services-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap; gap: 1.5rem;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--gray-300);
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+.service-card {
+  background: var(--white);
+  padding: 2.5rem 2rem;
+  position: relative;
+  transition: background 0.3s;
+  cursor: default;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-smooth);
+}
+.service-card:hover { background: var(--cream); }
+.service-card:hover::before { transform: scaleX(1); }
+.service-card-icon {
+  width: 52px; height: 52px;
+  background: var(--cream);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 1.25rem;
+  transition: background 0.3s;
+}
+.service-card:hover .service-card-icon {
+  background: rgba(26,107,122,0.08);
+}
+.service-card-name {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+.service-card-desc {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  font-weight: 300;
+}
+.service-card-link {
+  display: inline-flex;
+  align-items: center; gap: 0.4rem;
+  margin-top: 1.2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--teal);
+  text-decoration: none;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+.service-card:hover .service-card-link {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ===== TESTIMONIALS ===== */
+#depoimentos {
+  padding: 7rem 0;
+  background: var(--navy);
+  overflow: hidden;
+}
+#depoimentos .section-label { color: var(--gold); }
+#depoimentos .section-label::before { background: var(--gold); }
+#depoimentos .section-title { color: var(--white); }
+#depoimentos .section-title em { color: var(--gold-light); }
+
+.testimonials-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 3rem;
+  flex-wrap: wrap; gap: 1.5rem;
+}
+.rating-block {
+  display: flex;
+  align-items: center; gap: 1.2rem;
+}
+.rating-score {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1;
+}
+.rating-stars { color: var(--gold); font-size: 1.1rem; letter-spacing: 2px; }
+.rating-count {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  margin-top: 0.2rem;
+  letter-spacing: 0.08em;
+}
+
+.testimonials-track {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.testimonial-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  position: relative;
+  transition: background 0.3s, transform 0.3s;
+}
+.testimonial-card:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-4px);
+}
+.testimonial-quote {
+  font-size: 2rem;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 1rem;
+  font-family: serif;
+  opacity: 0.6;
+}
+.testimonial-text {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+.testimonial-footer {
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.testimonial-avatar {
+  width: 38px; height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--teal), var(--gold));
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: white;
+  flex-shrink: 0;
+}
+.testimonial-name {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+}
+.testimonial-stars {
+  font-size: 0.7rem;
+  color: var(--gold);
+  letter-spacing: 1px;
+}
+
+/* Google Badge */
+.google-badge {
+  display: inline-flex;
+  align-items: center; gap: 0.6rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  padding: 0.55rem 1.1rem;
+  border-radius: 2px;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: background 0.25s;
+}
+.google-badge:hover { background: rgba(255,255,255,0.1); }
+.google-g {
+  font-weight: 700;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #4285F4, #EA4335, #FBBC05, #34A853);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== WHY ===== */
+#diferenciais {
+  padding: 7rem 0;
+  background: var(--white);
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.why-card {
+  text-align: center;
+  padding: 2.5rem 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+.why-card:hover {
+  border-color: var(--gray-300);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-6px);
+}
+.why-icon {
+  width: 64px; height: 64px;
+  background: linear-gradient(135deg, rgba(26,107,122,0.08), rgba(26,107,122,0.04));
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.6rem;
+  margin: 0 auto 1.25rem;
+  transition: background 0.3s;
+}
+.why-card:hover .why-icon {
+  background: linear-gradient(135deg, rgba(26,107,122,0.15), rgba(26,107,122,0.08));
+}
+.why-title {
+  font-family: var(--font-display);
+  font-size: 1.12rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+}
+.why-desc {
+  font-size: 0.85rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ===== PROCESS ===== */
+#processo {
+  padding: 7rem 0;
+  background: var(--cream);
+}
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin-top: 3.5rem;
+  position: relative;
+}
+.process-steps::after {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(12.5% + 32px);
+  right: calc(12.5% + 32px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--teal), var(--gold));
+  opacity: 0.3;
+}
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+.process-num {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--teal);
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 0 6px var(--cream);
+  transition: background 0.3s, color 0.3s;
+}
+.process-step:hover .process-num {
+  background: var(--teal);
+  color: white;
+}
+.process-step-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--navy);
+  margin-bottom: 0.5rem;
+}
+.process-step-desc {
+  font-size: 0.83rem;
+  color: var(--gray-500);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+/* ===== CTA STRIP ===== */
+.cta-strip {
+  background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%);
+  padding: 5rem 5vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.cta-strip::before {
+  content: '';
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: radial-gradient(circle at 30% 60%, rgba(201,168,76,0.1) 0%, transparent 50%);
+}
+.cta-strip-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  display: flex; align-items: center; justify-content: center; gap: 0.6rem;
+}
+.cta-strip-label::before, .cta-strip-label::after {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--gold);
+  opacity: 0.5;
+}
+.cta-strip-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 300;
+  color: var(--white);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+.cta-strip-title em { font-style: italic; color: var(--gold-light); }
+.cta-strip-desc {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+.cta-strip-actions {
+  display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;
+}
+.btn-gold {
+  display: inline-flex;
+  align-items: center; gap: 0.5rem;
+  background: var(--gold);
+  color: var(--navy);
+  padding: 1rem 2.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.25s, transform 0.2s;
+}
+.btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center; gap: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: border-color 0.25s, background 0.25s, transform 0.2s;
+}
+.btn-outline-white:hover {
+  border-color: white;
+  background: rgba(255,255,255,0.1);
+  transform: translateY(-2px);
+}
+
+/* ===== CONTACT ===== */
+#contato {
+  padding: 7rem 0;
+  background: var(--white);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 5rem;
+  align-items: start;
+}
+.contact-info-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 300;
+  color: var(--navy);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.contact-info-desc {
+  font-size: 0.95rem;
+  color: var(--gray-500);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+}
+.contact-details {
+  display: flex; flex-direction: column; gap: 1.25rem;
+}
+.contact-detail {
+  display: flex; align-items: flex-start; gap: 1rem;
+}
+.contact-detail-icon {
+  width: 44px; height: 44px;
+  background: rgba(26,107,122,0.08);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  color: var(--teal);
+}
+.contact-detail-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gray-500);
+  margin-bottom: 0.2rem;
+}
+.contact-detail-value {
+  font-size: 0.95rem;
+  color: var(--navy);
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contact-detail-value a {
+  color: var(--teal);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.contact-detail-value a:hover { color: var(--teal-light); }
+
+.contact-hours {
+  margin-top: 2rem;
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+.contact-hours-title {
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--teal);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.contact-hours-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--gray-300);
+  color: var(--gray-700);
+}
+.contact-hours-row:last-child { border-bottom: none; }
+.contact-hours-time { color: var(--navy); font-weight: 500; }
+
+.contact-form {
+  background: var(--cream);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+}
+.contact-form h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+.contact-form-sub {
+  font-size: 0.82rem;
+  color: var(--gray-500);
+  margin-bottom: 2rem;
+}
+.form-group {
+  display: flex; flex-direction: column; gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+.form-group label {
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gray-700);
+  font-weight: 500;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  background: var(--white);
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius);
+  color: var(--navy);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--teal);
+  box-shadow: 0 0 0 3px rgba(26,107,122,0.1);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-submit {
+  width: 100%;
+  padding: 1rem;
+  background: var(--teal);
+  border: none;
+  border-radius: var(--radius);
+  color: white;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.25s, transform 0.2s;
+  margin-top: 0.5rem;
+}
+.form-submit:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+/* ===== MAP ===== */
+.map-section {
+  height: 360px;
+  background: var(--gray-100);
+  position: relative;
+  overflow: hidden;
+}
+.map-embed {
+  width: 100%; height: 100%;
+  border: 0;
+  filter: saturate(0.7) contrast(1.05);
+}
+.map-overlay {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-lg);
+  text-align: center;
+  pointer-events: none;
+}
+.map-overlay-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--navy);
+}
+.map-overlay-addr {
+  font-size: 0.8rem;
+  color: var(--gray-500);
+  margin-top: 0.25rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--navy);
+  padding: 4rem 5vw 2rem;
+}
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-brand-name {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 0.3rem;
+}
+.footer-brand-sub {
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.footer-brand-desc {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.45);
+  line-height: 1.75;
+  font-weight: 300;
+  max-width: 280px;
+  margin-bottom: 1.5rem;
+}
+.footer-socials {
+  display: flex; gap: 0.75rem;
+}
+.footer-social {
+  width: 36px; height: 36px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: border-color 0.25s, color 0.25s, background 0.25s;
+}
+.footer-social:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  background: rgba(201,168,76,0.08);
+}
+.footer-col-title {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+.footer-links {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 0.7rem;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.25s;
+  font-weight: 300;
+}
+.footer-links a:hover { color: var(--gold-light); }
+.footer-bottom {
+  max-width: 1200px;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; gap: 1rem;
+}
+.footer-copyright {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.3);
+  font-weight: 300;
+}
+.footer-cft {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ===== WHATSAPP FAB ===== */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 2rem; right: 2rem;
+  z-index: 200;
+  width: 58px; height: 58px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4);
+  text-decoration: none;
+  transition: transform 0.25s, box-shadow 0.25s;
+  animation: fabPulse 3s ease-in-out infinite;
+}
+.whatsapp-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 36px rgba(37,211,102,0.5);
+}
+@keyframes fabPulse {
+  0%, 100% { box-shadow: 0 4px 24px rgba(37,211,102,0.4); }
+  50% { box-shadow: 0 4px 24px rgba(37,211,102,0.4), 0 0 0 10px rgba(37,211,102,0.08); }
+}
+.whatsapp-icon {
+  width: 30px; height: 30px;
+}
+
+/* ===== ANIMATIONS ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s var(--ease-out), transform 0.7s var(--ease-out);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ===== MOBILE NAV DRAWER ===== */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: var(--navy);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.mobile-nav.open { display: flex; }
+.mobile-nav a {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 300;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  transition: color 0.25s;
+}
+.mobile-nav a:hover { color: var(--gold-light); }
+.mobile-nav-close {
+  position: absolute;
+  top: 1.5rem; right: 2rem;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.8rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.25s;
+}
+.mobile-nav-close:hover { opacity: 1; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { display: none; }
+  .hero-left { padding: 4rem 6vw; text-align: center; align-items: center; }
+  .hero-stats { justify-content: center; }
+  .hero-badge { align-self: center; }
+  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .about-visual { max-width: 400px; margin: 0 auto; }
+  .about-content { padding-right: 0; }
+  .services-grid { grid-template-columns: 1fr 1fr; }
+  .why-grid { grid-template-columns: 1fr 1fr; }
+  .process-steps { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .process-steps::after { display: none; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+
+@media (max-width: 640px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .testimonials-track { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .process-steps { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: column; gap: 1.5rem; }
+  .hero-actions { flex-direction: column; align-items: center; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+  .cta-strip-actions { flex-direction: column; align-items: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <div class="nav-logo-name">Dra. Marina Barreto &amp; Dr. Brécio Andrade</div>
+    <div class="nav-logo-sub">Odontologia de Excelência · Ponte Nova, MG</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#servicos">Serviços</a></li>
+    <li><a href="#depoimentos">Avaliações</a></li>
+    <li><a href="#diferenciais">Diferenciais</a></li>
+    <li><a href="#contato" class="nav-cta">Agendar Consulta</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" aria-label="Menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Nav -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav-close" id="mobileClose" aria-label="Fechar menu">✕</button>
+  <a href="#sobre" onclick="closeMobile()">Sobre</a>
+  <a href="#servicos" onclick="closeMobile()">Serviços</a>
+  <a href="#depoimentos" onclick="closeMobile()">Avaliações</a>
+  <a href="#diferenciais" onclick="closeMobile()">Diferenciais</a>
+  <a href="#contato" onclick="closeMobile()">Agendar Consulta</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="hero-bg"></div>
+
+  <div class="hero-left">
+    <div class="hero-badge reveal">
+      <span class="hero-badge-star">★★★★★</span>
+      <span class="hero-badge-text">5,0 · 118 avaliações Google</span>
+    </div>
+
+    <h1 class="hero-title reveal reveal-delay-1">
+      O sorriso que você<br>
+      <em>sempre mereceu</em>
+    </h1>
+
+    <p class="hero-desc reveal reveal-delay-2">
+      Clínica odontológica de referência em Ponte Nova. Tecnologia de ponta, atendimento humanizado e resultados que transformam vidas — desde o clareamento até o tratamento completo.
+    </p>
+
+    <div class="hero-actions reveal reveal-delay-3">
+      <a href="https://wa.me/5531992870897?text=Olá!%20Gostaria%20de%20agendar%20uma%20consulta." class="btn-primary" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Agendar pelo WhatsApp
+      </a>
+      <a href="tel:+5531992870897" class="btn-ghost">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.79 19.79 0 01.08 4a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.91a16 16 0 006.29 6.29l1.28-1.28a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+        (31) 99287-0897
+      </a>
+    </div>
+
+    <div class="hero-stats reveal reveal-delay-4">
+      <div>
+        <div class="hero-stat-num">5<span>,0</span></div>
+        <div class="hero-stat-label">Google Rating</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">118<span>+</span></div>
+        <div class="hero-stat-label">Avaliações</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">9<span>+</span></div>
+        <div class="hero-stat-label">Especialidades</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-card">
+      <div class="hero-card-icon">🦷</div>
+      <div class="hero-card-title">Agende sua Consulta</div>
+      <div class="hero-card-sub">Resposta em até 1 hora via WhatsApp</div>
+      <div class="hero-card-form">
+        <input type="text" placeholder="Seu nome completo">
+        <input type="tel" placeholder="WhatsApp com DDD">
+        <select>
+          <option value="" disabled selected>Qual serviço você procura?</option>
+          <option>Clareamento Dental</option>
+          <option>Aparelhos Invisíveis</option>
+          <option>Aparelhos Ortodônticos</option>
+          <option>Cirurgia de Sisos</option>
+          <option>Dentaduras e Próteses</option>
+          <option>DTM / Bruxismo</option>
+          <option>Prevenção e Limpeza</option>
+          <option>Restaurações Estéticas</option>
+          <option>Tratamento de Canal</option>
+        </select>
+        <button onclick="submitForm()">Solicitar Agendamento</button>
+      </div>
+      <div class="hero-card-note">✓ Sem compromisso &nbsp;·&nbsp; ✓ Retorno rápido</div>
+    </div>
+  </div>
+
+  <div class="hero-wave">
+    <svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0 60L1440 60L1440 20C1200 60 900 0 720 20C540 40 240 0 0 20Z" fill="#faf7f2"/>
+    </svg>
+  </div>
+</header>
+
+<!-- ===== ABOUT ===== -->
+<section id="sobre">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-img-wrap">
+          <div class="about-img-placeholder">
+            <div class="about-icon-big">🦷</div>
+          </div>
+          <!-- Replace above with: <img src="https://i.imgur.com/vWu9wX2.jpeg" alt="Clínica Dra. Marina e Dr. Brécio"> -->
+        </div>
+        <div class="about-accent"></div>
+        <div class="about-accent-2"></div>
+        <div class="about-badge-float">
+          <div class="about-badge-float-icon">★</div>
+          <div>
+            <div class="about-badge-float-num">5,0</div>
+            <div class="about-badge-float-label">Nota no Google</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-content">
+        <div class="section-label reveal">Quem somos</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Dois especialistas.<br>
+          <em>Uma missão em comum.</em>
+        </h2>
+        <p class="about-text reveal reveal-delay-2">
+          A <strong>Dra. Marina Barreto</strong> e o <strong>Dr. Brécio Andrade</strong> são cirurgiões-dentistas com sólida formação acadêmica e ampla experiência clínica, dedicados a oferecer o que há de melhor em odontologia para os pacientes de Ponte Nova e região.
+        </p>
+        <p class="about-text reveal reveal-delay-2" style="margin-top: -1rem;">
+          Com uma equipe nota mil, atendimento personalizado e equipamentos modernos, transformamos cada visita em uma experiência tranquila, confortável e com resultados excepcionais.
+        </p>
+        <div class="about-features reveal reveal-delay-3">
+          <div class="about-feature">
+            <div class="about-feature-check">✓</div>
+            <div class="about-feature-text">
+              <strong>Equipe altamente qualificada</strong>
+              <span>Profissionais em constante atualização científica e técnica.</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-check">✓</div>
+            <div class="about-feature-text">
+              <strong>Atendimento humanizado</strong>
+              <span>Cada paciente recebe atenção individualizada e cuidado genuíno.</span>
+            </div>
+          </div>
+          <div class="about-feature">
+            <div class="about-feature-check">✓</div>
+            <div class="about-feature-text">
+              <strong>Tecnologia e biossegurança</strong>
+              <span>Equipamentos modernos e protocolos rigorosos de esterilização.</span>
+            </div>
+          </div>
+        </div>
+        <a href="https://wa.me/5531992870897" class="btn-primary" target="_blank" rel="noopener" style="display: inline-flex; background: var(--teal); color: white;">
+          Conhecer a clínica
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="servicos">
+  <div class="section-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-label reveal">Especialidades</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          Soluções completas<br>
+          <em>para seu sorriso</em>
+        </h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-2" style="max-width: 340px; text-align: right;">
+        Do preventivo ao estético, do ortopédico ao cirúrgico — tratamos com excelência cada necessidade.
+      </p>
+    </div>
+
+    <div class="services-grid reveal">
+      <div class="service-card">
+        <div class="service-card-icon">✨</div>
+        <div class="service-card-name">Clareamento Dental</div>
+        <div class="service-card-desc">Técnicas modernas para devolver o brilho e a brancura ao seu sorriso com segurança e eficácia comprovada.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">😁</div>
+        <div class="service-card-name">Aparelhos Invisíveis</div>
+        <div class="service-card-desc">Alinhamento dental discreto e confortável com alinhadores transparentes personalizados para o seu caso.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🦷</div>
+        <div class="service-card-name">Aparelhos Ortodônticos</div>
+        <div class="service-card-desc">Ortodontia tradicional e estética para corrigir a posição dos dentes e melhorar a oclusão com precisão.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🏥</div>
+        <div class="service-card-name">Cirurgia de Sisos</div>
+        <div class="service-card-desc">Extração de terceiros molares com técnica atraumática, anestesia eficiente e recuperação rápida e confortável.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">💎</div>
+        <div class="service-card-name">Dentaduras e Próteses</div>
+        <div class="service-card-desc">Soluções protéticas personalizadas que restabelecem função, estética e autoestima com naturalidade e conforto.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🧘</div>
+        <div class="service-card-name">DTM, Bruxismo e ATM</div>
+        <div class="service-card-desc">Diagnóstico e tratamento especializado das desordens temporomandibulares, apertamento e dores de cabeça relacionadas.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🛡️</div>
+        <div class="service-card-name">Prevenção</div>
+        <div class="service-card-desc">Limpeza profissional, aplicação de flúor e orientações para manter a saúde bucal em dia e evitar problemas futuros.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">🌟</div>
+        <div class="service-card-name">Restaurações Estéticas</div>
+        <div class="service-card-desc">Resinas compostas de última geração para restaurar dentes com naturalidade, durabilidade e aparência impecável.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-card-icon">⚕️</div>
+        <div class="service-card-name">Tratamento de Canal</div>
+        <div class="service-card-desc">Endodontia com técnica moderna e anestesia eficaz para salvar o dente natural com máximo conforto e segurança.</div>
+        <a href="#contato" class="service-card-link">Saiba mais →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section id="depoimentos">
+  <div class="section-inner">
+    <div class="testimonials-header">
+      <div>
+        <div class="section-label reveal">Depoimentos</div>
+        <h2 class="section-title reveal reveal-delay-1">
+          O que nossos<br>
+          <em>pacientes dizem</em>
+        </h2>
+      </div>
+      <div class="reveal reveal-delay-2" style="display: flex; flex-direction: column; align-items: flex-end; gap: 1rem;">
+        <div class="rating-block">
+          <div class="rating-score">5,0</div>
+          <div>
+            <div class="rating-stars">★★★★★</div>
+            <div class="rating-count">118 avaliações verificadas</div>
+          </div>
+        </div>
+        <a href="https://www.google.com/maps/search/Consultório+Odontológico+Dra.+Marina+Barreto" class="google-badge" target="_blank" rel="noopener">
+          <span class="google-g">G</span> Ver todas no Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="testimonials-track">
+      <div class="testimonial-card reveal">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Ótimo profissional, bom atendimento e qualidade no tratamento do seu sorriso. Recomendo demais para quem busca excelência!</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">MC</div>
+          <div>
+            <div class="testimonial-name">Maria Clara</div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Excelente atendimento, profissionais exímios, equipe nota 1000. Me sinto em casa cada vez que venho à clínica. Recomendo a todos!</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">FS</div>
+          <div>
+            <div class="testimonial-name">Felipe Souza</div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Super qualificados, atenciosos e donos de um serviço de qualidade! Fiz meu tratamento ortodôntico aqui e o resultado foi incrível.</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">AP</div>
+          <div>
+            <div class="testimonial-name">Ana Paula</div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Ambiente aconchegante, profissionais extremamente capacitados. Tirei o siso sem sentir nada. Gratidão pelo cuidado!</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">RC</div>
+          <div>
+            <div class="testimonial-name">Ricardo C.</div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Fiz o clareamento dental e o resultado superou minhas expectativas! Sorriso muito mais bonito e autoestima lá em cima. Amei!</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">JO</div>
+          <div>
+            <div class="testimonial-name">Juliana O.</div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card reveal reveal-delay-3">
+        <div class="testimonial-quote">"</div>
+        <p class="testimonial-text">Clínica de referência em Ponte Nova. Trataram meu bruxismo com competência e dedicação. Minha qualidade de vida melhorou muito!</p>
+        <div class="testimonial-footer">
+          <div class="testimonial-avatar">LF</div>
+          <div>
+            <div class="testimonial-name">Lucas F.</div>
+            <div class="testimonial-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section id="diferenciais">
+  <div class="section-inner">
+    <div style="text-align: center; margin-bottom: 1rem;">
+      <div class="section-label reveal" style="justify-content: center;">Nossos Diferenciais</div>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align: center;">Por que escolher<br><em>nossa clínica?</em></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">🏆</div>
+        <div class="why-title">Nota 5,0 no Google</div>
+        <div class="why-desc">118 pacientes satisfeitos comprovam a excelência do nosso atendimento e tratamento.</div>
+      </div>
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon">❤️</div>
+        <div class="why-title">Atendimento Humanizado</div>
+        <div class="why-desc">Cada paciente é acolhido com atenção, empatia e cuidado individualizado do início ao fim.</div>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon">🔬</div>
+        <div class="why-title">Tecnologia Moderna</div>
+        <div class="why-desc">Equipamentos de última geração para diagnósticos precisos e tratamentos mais confortáveis.</div>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon">📚</div>
+        <div class="why-title">Equipe Especializada</div>
+        <div class="why-desc">Profissionais em constante atualização científica para oferecer o que há de mais moderno.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PROCESS ===== -->
+<section id="processo">
+  <div class="section-inner">
+    <div style="text-align: center; margin-bottom: 0.5rem;">
+      <div class="section-label reveal" style="justify-content: center;">Como Funciona</div>
+      <h2 class="section-title reveal reveal-delay-1" style="text-align: center;">Seu tratamento em<br><em>4 etapas simples</em></h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="process-num">1</div>
+        <div class="process-step-title">Agendamento</div>
+        <div class="process-step-desc">Entre em contato pelo WhatsApp ou telefone e escolha o melhor horário para você.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="process-num">2</div>
+        <div class="process-step-title">Avaliação</div>
+        <div class="process-step-desc">Consulta completa com anamnese, exame clínico e diagnóstico preciso da sua saúde bucal.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="process-num">3</div>
+        <div class="process-step-title">Plano de Tratamento</div>
+        <div class="process-step-desc">Apresentamos as melhores opções para o seu caso, com total transparência e sem surpresas.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="process-num">4</div>
+        <div class="process-step-title">Transformação</div>
+        <div class="process-step-desc">Tratamento com excelência, acompanhamento contínuo e sorriso transformado!</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA STRIP ===== -->
+<div class="cta-strip reveal">
+  <div class="cta-strip-label">Próximo passo</div>
+  <h2 class="cta-strip-title">
+    Pronto para transformar<br>
+    <em>seu sorriso?</em>
+  </h2>
+  <p class="cta-strip-desc">Agende sua avaliação hoje mesmo. Atendemos com carinho e comprometimento.</p>
+  <div class="cta-strip-actions">
+    <a href="https://wa.me/5531992870897?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="btn-gold" target="_blank" rel="noopener">
+      Agendar pelo WhatsApp
+    </a>
+    <a href="tel:+5531992870897" class="btn-outline-white">
+      Ligar agora
+    </a>
+  </div>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<section id="contato">
+  <div class="section-inner">
+    <div class="contact-grid">
+      <div>
+        <div class="section-label reveal">Contato</div>
+        <h2 class="contact-info-title reveal reveal-delay-1">
+          Estamos prontos<br>para te atender
+        </h2>
+        <p class="contact-info-desc reveal reveal-delay-2">
+          Agende sua consulta, tire suas dúvidas ou venha nos visitar. Sua saúde bucal é a nossa prioridade.
+        </p>
+
+        <div class="contact-details reveal reveal-delay-3">
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div>
+              <div class="contact-detail-label">Endereço</div>
+              <div class="contact-detail-value">Av. Dr. Otávio Soares, 41/104 e 105<br>Palmeiras, Ponte Nova – MG, 35430-229</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📱</div>
+            <div>
+              <div class="contact-detail-label">WhatsApp / Telefone</div>
+              <div class="contact-detail-value">
+                <a href="https://wa.me/5531992870897">(31) 99287-0897</a>
+              </div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">⭐</div>
+            <div>
+              <div class="contact-detail-label">Avaliação Google</div>
+              <div class="contact-detail-value">5,0 — 118 avaliações verificadas</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-hours reveal reveal-delay-4">
+          <div class="contact-hours-title">Horário de Funcionamento</div>
+          <div class="contact-hours-row">
+            <span>Segunda – Sexta</span>
+            <span class="contact-hours-time">07:30 – 18:00</span>
+          </div>
+          <div class="contact-hours-row">
+            <span>Sábado</span>
+            <span class="contact-hours-time">07:30 – 12:00</span>
+          </div>
+          <div class="contact-hours-row">
+            <span>Domingo</span>
+            <span class="contact-hours-time">Fechado</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form reveal reveal-delay-2">
+        <h3>Solicitar Agendamento</h3>
+        <div class="contact-form-sub">Preencha e entraremos em contato rapidamente.</div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label for="telefone">WhatsApp</label>
+            <input type="tel" id="telefone" placeholder="(31) 99999-9999">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="servico">Serviço de interesse</label>
+          <select id="servico">
+            <option value="" disabled selected>Selecione um serviço</option>
+            <option>Clareamento Dental</option>
+            <option>Aparelhos Invisíveis</option>
+            <option>Aparelhos Ortodônticos</option>
+            <option>Cirurgia de Sisos</option>
+            <option>Dentaduras e Próteses</option>
+            <option>DTM / Bruxismo / ATM</option>
+            <option>Prevenção e Limpeza</option>
+            <option>Restaurações Estéticas</option>
+            <option>Tratamento de Canal</option>
+            <option>Outros / Não sei ainda</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem (opcional)</label>
+          <textarea id="mensagem" placeholder="Conte um pouco sobre o que você precisa..."></textarea>
+        </div>
+        <button class="form-submit" onclick="submitContactForm()">
+          Enviar pelo WhatsApp
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAP ===== -->
+<div class="map-section">
+  <iframe
+    class="map-embed"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3742.5!2d-42.9!3d-20.41!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjDCsDI0JzM2LjAiUyA0MsKwNTQnMDAuMCJX!5e0!3m2!1spt-BR!2sbr!4v1"
+    allowfullscreen=""
+    loading="lazy"
+    title="Localização da Clínica"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand-name">Dra. Marina Barreto &amp; Dr. Brécio Andrade</div>
+      <div class="footer-brand-sub">Odontologia de Excelência</div>
+      <p class="footer-brand-desc">
+        Clínica odontológica de referência em Ponte Nova, MG. Comprometidos com saúde, beleza e bem-estar do seu sorriso.
+      </p>
+      <div class="footer-socials">
+        <a href="#" class="footer-social" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/5531992870897" class="footer-social" aria-label="WhatsApp">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://g.page/r/" class="footer-social" aria-label="Google">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Serviços</div>
+      <ul class="footer-links">
+        <li><a href="#servicos">Clareamento Dental</a></li>
+        <li><a href="#servicos">Aparelhos Invisíveis</a></li>
+        <li><a href="#servicos">Ortodontia</a></li>
+        <li><a href="#servicos">Cirurgia de Sisos</a></li>
+        <li><a href="#servicos">Tratamento de Canal</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Mais Serviços</div>
+      <ul class="footer-links">
+        <li><a href="#servicos">Dentaduras e Próteses</a></li>
+        <li><a href="#servicos">DTM e Bruxismo</a></li>
+        <li><a href="#servicos">Prevenção</a></li>
+        <li><a href="#servicos">Restaurações</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Contato</div>
+      <ul class="footer-links">
+        <li><a href="tel:+5531992870897">(31) 99287-0897</a></li>
+        <li><a href="https://wa.me/5531992870897">WhatsApp</a></li>
+        <li><a href="#contato">Av. Dr. Otávio Soares, 41</a></li>
+        <li><a href="#contato">Palmeiras, Ponte Nova – MG</a></li>
+        <li><a href="#contato">Seg–Sex: 07:30–18:00</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copyright">
+      © 2026 Dra. Marina Barreto &amp; Dr. Brécio Andrade · Odontologia de Excelência
+    </div>
+    <div class="footer-cft">
+      CRO-MG · Todos os direitos reservados
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FAB ===== -->
+<a href="https://wa.me/5531992870897?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta." class="whatsapp-fab" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">
+  <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<script>
+// ===== NAVBAR SCROLL =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// ===== HAMBURGER =====
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+const mobileClose = document.getElementById('mobileClose');
+hamburger.addEventListener('click', () => mobileNav.classList.add('open'));
+hamburger.addEventListener('keydown', e => e.key === 'Enter' && mobileNav.classList.add('open'));
+mobileClose.addEventListener('click', () => mobileNav.classList.remove('open'));
+function closeMobile() { mobileNav.classList.remove('open'); }
+
+// ===== REVEAL ON SCROLL =====
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+reveals.forEach(el => observer.observe(el));
+
+// ===== FORM SUBMIT (Hero) =====
+function submitForm() {
+  const nome = document.querySelector('.hero-card-form input[type="text"]').value.trim();
+  const telefone = document.querySelector('.hero-card-form input[type="tel"]').value.trim();
+  const servico = document.querySelector('.hero-card-form select').value;
+  if (!nome || !telefone) { alert('Por favor, preencha seu nome e telefone.'); return; }
+  const msg = `Olá! Me chamo ${nome}, meu WhatsApp é ${telefone}. Tenho interesse em: ${servico || 'consulta geral'}.`;
+  window.open(`https://wa.me/5531992870897?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// ===== FORM SUBMIT (Contact) =====
+function submitContactForm() {
+  const nome = document.getElementById('nome').value.trim();
+  const telefone = document.getElementById('telefone').value.trim();
+  const servico = document.getElementById('servico').value;
+  const mensagem = document.getElementById('mensagem').value.trim();
+  if (!nome || !telefone) { alert('Por favor, preencha nome e telefone.'); return; }
+  let msg = `Olá! Vim pelo site. Me chamo ${nome}, meu WhatsApp é ${telefone}.`;
+  if (servico) msg += ` Tenho interesse em: ${servico}.`;
+  if (mensagem) msg += ` Mensagem: ${mensagem}`;
+  window.open(`https://wa.me/5531992870897?text=${encodeURIComponent(msg)}`, '_blank');
+}
+
+// ===== SMOOTH NAV ACTIVE =====
+const sections = document.querySelectorAll('section[id], header');
+const navLinks = document.querySelectorAll('.nav-links a');
+const ioNav = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const id = entry.target.id;
+      const active = document.querySelector(`.nav-links a[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.4 });
+sections.forEach(s => ioNav.observe(s));
+</script>
+</body>
+</html>
