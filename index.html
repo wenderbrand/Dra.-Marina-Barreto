@@ -330,12 +330,18 @@ footer{background:var(--navy);padding:clamp(2.5rem,5vh,4rem) clamp(1rem,5vw,4rem
   nav{padding:0 1rem;padding-top:var(--safe-top)}
   .nav-logo-name{font-size:.82rem}
   .nav-logo-sub{display:none}
-  .hero-left{padding:1.8rem 1.25rem 4rem}
-  .hero-stats{flex-direction:column;gap:1.1rem;align-items:center}
+  .hero-left{padding:1.8rem 1.25rem 2.5rem}
+  .hero{min-height:auto;padding-bottom:0}
+  .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:1.5rem;padding-top:1.5rem}
+  .hero-stats>div{text-align:center;padding:.5rem .5rem;border-right:1px solid rgba(255,255,255,.12)}
+  .hero-stats>div:last-child{border-right:none}
+  .hero-stat-num{font-size:1.6rem}
+  .hero-stat-label{font-size:.58rem}
   .hero-actions{flex-direction:column;width:100%;max-width:320px}
   .hero-actions a{text-align:center;justify-content:center}
   .services-grid{grid-template-columns:1fr}
-  .services-header{flex-direction:column}
+  .services-header{flex-direction:column;align-items:flex-start}
+  .services-header>*{text-align:left}
   .testimonials-track{grid-template-columns:1fr}
   .testimonials-header{flex-direction:column;align-items:flex-start}
   .why-grid{grid-template-columns:1fr 1fr;gap:.85rem}
